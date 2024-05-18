@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="img/icon.png"
+      sizes="16x16"
+    />
+    <title> WebCraftify : Website Design Request Form</title>
+    <link rel="stylesheet" href="css/loder.css">
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background: -webkit-linear-gradient(to right, #a6caff, #67abff);
+        background: linear-gradient(to bottom, #a6caff, #243953);
+        transition: background-color 0.3s ease, color 0.3s ease;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 60%;
+    margin: 50px auto;
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+fieldset {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+legend {
+    font-weight: bold;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+input, textarea, select {
+    width: 97%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    width: 20%;
+    padding: 10px;
+    background-color: #000000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: 0.4s ease-in-out;
+}
+
+button:hover {
+    background-color: #68d3fd;
+    color: #000000;
+}
+
+    </style>
+</head>
+<body>
+    <!-- <div class="loader"></div> -->
+    <div class="container">
+        <h1>Website Design Request Form</h1>
+        <form id="designRequestForm">
+            <fieldset>
+                <legend>User Information</legend>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Project Details</legend>
+                <label for="projectName">Project Name:</label>
+                <input type="text" id="projectName" name="projectName" required>
+                
+                <label for="description">Project Description:</label>
+                <textarea id="description" name="description" required></textarea>
+            </fieldset>
+
+            <fieldset>
+                <legend>Design Preferences</legend>
+                <label for="style">Preferred Style:</label>
+                <select id="style" name="style" required>
+                    <option value="">Select a style</option>
+                    <option value="minimalistic">Minimalistic</option>
+                    <option value="modern">Modern</option>
+                    <option value="classic">Classic</option>
+                </select>
+                
+                <label for="colorScheme">Color Scheme:</label>
+                <input type="text" id="colorScheme" name="colorScheme" required>
+                
+                <label for="features">Key Features:</label>
+                <textarea id="features" name="features"></textarea>
+            </fieldset>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <!-- <script src="script.js"></script> -->
+    <script>
+        document.getElementById('designRequestForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const phone = document.getElementById('phone').value.trim();
+    const projectName = document.getElementById('projectName').value.trim();
+    const description = document.getElementById('description').value.trim();
+    const style = document.getElementById('style').value;
+    const colorScheme = document.getElementById('colorScheme').value.trim();
+    
+    if (!name || !email || !phone || !projectName || !description || !style || !colorScheme) {
+        alert('Please fill out all required fields.');
+        return;
+    }
+
+    alert('Form submitted successfully!');
+    document.getElementById('designRequestForm').reset();
+});
+
+    </script>
+</body>
+</html>

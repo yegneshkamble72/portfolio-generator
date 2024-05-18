@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>WebCraftify - Contact</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="img/icon.png"
+      sizes="16x16"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    
+    <style>
+      body {
+        background-image: url(img/bg.jpg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+      }
+      nav {
+        /* background-color: rgb(123, 137, 228); */
+        background-image: url(img/bg.jpg);
+        box-shadow: 2px 2px 2px black;
+        margin-top: 0.5%;
+      }
+      h2 {
+        text-align: center;
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: 40px;
+        text-transform: uppercase;
+        color: #0b0b0b;
+        text-decoration: none;
+        z-index: ;
+      }
+
+      .top {
+        margin-top: 50px;
+        background-image: url(img/bg.jpg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+      }
+
+      .container {
+        display: flex;
+        width: 90%;
+        margin: 0 auto;
+        height: 40%;
+        padding-top: 2%;
+        padding-bottom: 3%;
+        padding-left: 3%;
+        padding-right: 3%;
+        /* background-color: #a9a9a9; */
+        background: transparent;
+        box-shadow: 0 2px 5px rgb(0, 0, 0);
+      }
+
+      .contact {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 3.5%;
+        background-color: #faf0e6;
+      }
+
+      .contact-info {
+        flex: 1.5;
+        padding-left: 3%;
+        padding-top: 5%;
+        padding-bottom: 1%;
+        padding-left: 2%;
+        padding-right: 2%;
+      }
+
+      .contact-info .row {
+        display: flex;
+        height: 65px;
+        align-items: center;
+      }
+      .contact-info .left .icons {
+        margin: 2px 0;
+        margin-left: 8%;
+        /* font-size: 25px; */
+      }
+      .contact-info .row .info {
+        margin-left: 30px;
+      }
+      .contact-info .row i {
+        font-size: 20px;
+        color: rgb(215, 201, 204);
+      }
+      .contact-info .info .head {
+        font-weight: 700;
+        font-size: 27px;
+      }
+      .contact-info .info .sub-title {
+        color: #000000;
+        font-size: 20px;
+      }
+
+      .contact-form {
+        flex: 2;
+        width: 9%;
+        height: 65%;
+        margin-top: 5%;
+        margin-right: 2%;
+        padding: 20px;
+        background-color: #000000;
+        border-radius: 8px;
+        box-shadow: 0 0 5px rgb(0, 0, 0);
+      }
+
+      .contact-form h2 {
+        margin-bottom: 20px;
+        text-align: center;
+        font-size: 40px;
+        font-family: "Times New Roman", serif;
+        color: #bebebe;
+      }
+
+      .form-group {
+        margin-bottom: 20px;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      input[type="date"],
+      input[type="time"],
+      input[type="number"],
+      input[type="tel"] {
+        width: 100%;
+        padding: 10px;
+        border-radius: 5px;
+        color: white;
+        border: 1px solid #ccc;
+      }
+      #date {
+        justify-content: space-between;
+        width: 47%;
+        margin-left: 2%;
+        color: #eeeeee;
+        border: 1px solid #e7fff9;
+        background-color: transparent;
+      }
+
+      #name,
+      #guests,
+      #email,
+      #phone {
+        width: 96.8%;
+        margin-left: 2%;
+        margin-right: 1%;
+        color: #ffffff;
+        border: 1px solid #e7fff9;
+        background-color: transparent;
+      }
+
+      button {
+        padding: 10px 20px;
+        background-color: transparent;
+        border: 1px solid #e7fff9;
+        border-radius: 5px;
+        cursor: pointer;
+        color: #fff;
+        font-size: 15px;
+        font-family: Verdana, Arial, Helvetica, sans-serif;
+        transition: all 0.3s ease-in-out;
+      }
+
+      button:hover {
+        background-color: #117964;
+      }
+
+      .backpage {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .backpage a {
+        --b: 3px; /* border thickness */
+        --s: 0.45em; /* size of the corner */
+        --color: #373b44;
+
+        padding: calc(0.5em + var(--s)) calc(0.9em + var(--s));
+        color: var(--color);
+        --_p: var(--s);
+        background: conic-gradient(
+            from 90deg at var(--b) var(--b),
+            #0000 90deg,
+            var(--color) 0
+          )
+          var(--_p) var(--_p) / calc(100% - var(--b) - 2 * var(--_p))
+          calc(100% - var(--b) - 2 * var(--_p));
+        transition: 0.3s linear, color 0s, background-color 0s;
+        outline: var(--b) solid #0000;
+        outline-offset: 0.6em;
+
+        border: 0;
+        text-decoration: none;
+        font-size: 19px;
+        font-weight: 600;
+        font-family: system-ui;
+        color: black;
+
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+      }
+
+      .backpage a:hover,
+      .backpage a:focus-visible {
+        --_p: 0px;
+        outline-color: var(--color);
+        outline-offset: 0.05em;
+      }
+
+      .backpage a:active {
+        background: var(--color);
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <nav>
+      <div class="logo-btn wow fadeInLeft" data-wow-delay="0.4s">
+        <a href="#" class="logo wow fadeInLeft" data-wow-delay="0.4s"
+          >WebCraftify</a
+        >
+        <a href="#" class="login-btn">Login</a>
+        <a href="#" class="register-btn">Register</a>
+      </div>
+      <div class="nav-links">
+        <div class="st"></div>
+        <div class="nd">
+          <ul class="nav-ul">
+            <li><a href="home">Home</a></li>
+            <li><a href="about.html">About us</a></li>
+            <li>
+              <a href="#" class="desktop-item">Resource</a>
+              <ul class="drop-menu">
+                <li><a href="survy.html">Portfolio</a></li>
+                <li><a href="#">Website</a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+              </ul>
+            </li>
+            <li><a href="contact-page">Support</a></li>
+          </ul>
+        </div>
+        <div class="rd"></div>
+      </div>
+    </nav> -->
+    <section id="contact-s">
+      <div class="top">
+        <h2>Contact</h2>
+        <div class="container">
+          <div class="contact-info">
+            <div class="column left">
+              <div
+                class="wow fadeInDown"
+                data-wow-delay="0.3s"
+                style="
+                  text-align: center;
+                  font-size: 3rem;
+                  font-weight: bold;
+                  margin-bottom: 40px;
+                  font-family: Papyrus, fantasy;
+                  /* text-transform: uppercase; */
+                  color: #000000;
+                  text-decoration: none;
+                "
+              >
+                WebCraftify
+              </div>
+
+              <div class="icons">
+                <!-- <div class="row">
+                  <i class="fas fa-user"></i>
+                  <div class="info">
+                    <div class="head">Name</div>
+                    <div class="sub-title">Yegnesh Kamble</div>
+                  </div>
+                </div> -->
+
+                <div class="row">
+                  <!-- <i class="fas fa-map-marker-alt"></i> -->
+                  <i class="fa fa-address-card" style="font-size:28px; color:black;"></i>
+                  <div class="info">
+                    <div class="head">Address</div>
+                    <div class="sub-title">
+                      Dharm-peth ,Nagpur, India - 441001
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <!-- <i class="fa-solid fa-phone"></i> -->
+                  <i class="fa fa-mobile-phone" style="font-size:48px;color:black"></i>
+                  <div class="info">
+                    <div class="head">Phone</div>
+                    <div class="sub-title">+91-9172691217</div>
+                  </div>
+                </div>
+                <div class="row">
+                  <!-- <i class="fas fa-envelope"></i> -->
+                  <i class="fa fa-envelope" style="font-size:28px;color:black"></i>
+
+                  <div class="info">
+                    <div class="head">Email</div>
+                    <div class="sub-title">info@WebCraftify.com</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="contact-form">
+            <h2>Support</h2>
+            <form action="#" method="POST">
+              <div class="form-group">
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Your Name"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="date"
+                  id="date"
+                  name="date"
+                  placeholder="Date"
+                  required
+                />
+                <input
+                  type="time"
+                  id="date"
+                  name="time"
+                  placeholder="Reporting Time"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <input
+                  type="text"
+                  id="guests"
+                  name="guests"
+                  min="1"
+                  placeholder="Write your Query or Problem...."
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="Your Email"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  pattern=""
+                  placeholder="Phone No"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <button type="submit">Submit</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section><br><br>
+    <div class="backpage">
+      <a href="INDEX.html">Go Back to Home Page.</a>
+    </div>
+    <br /><br />
+
+    <footer>
+      <div class="cont-foot">
+        <div class="box1">
+          <div class="logo-foot">
+            <a href="#" class="logo1">WebCraftify</a>
+          </div>
+          <div class="foot-main-cont">
+            <div class="list">
+              <ul class="list1">
+                <h5>Product</h5>
+                <br />
+                <li><a href="#">Portfolio Builder</a></li>
+                <li><a href="#">Website Builder</a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+              </ul>
+              <ul class="list2">
+                <h5>Support</h5>
+                <br />
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+              </ul>
+              <!-- <div class="info-webc"> 
+				  <h2>WebCraftify</h2>
+				  <form id="contact-form" action="process.php" method="post">
+					<label for="email">Email:</label>
+					<input type="email" id="email" name="email" required>
+					<button type="submit">Send Message</button>
+				  </form>
+				</div> -->
+            </div>
+            <div class="marque-line">
+              <marquee behavior="" direction="left">
+                <h3>
+                  Crafting Dynamic Web Experiences: Where Innovation Meets
+                  Creativity with WebCraftify.
+                </h3>
+              </marquee>
+            </div>
+          </div>
+        </div>
+
+        <div class="box2">
+          <div class="icon-foot">
+            <ul class="social">
+              <li><i class="fa fa-facebook" aria-hidden="true"></i></li>
+              <li><i class="fa fa-twitter" aria-hidden="true"></i></li>
+              <li><i class="fa fa-instagram" aria-hidden="true"></i></li>
+              <li><i class="fa fa-github" aria-hidden="true"></i></li>
+            </ul>
+          </div>
+          <div class="copyright-foot">
+            <h4>&#169;2024 WebCraftify.com</h4>
+            <ul>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+            <ul>
+              <li><a href="#">Terms of Use</a></li>
+            </ul>
+          </div>
+          <div class="backhome-btn">
+            <a href="#contact-s">&#129033;</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="js/script.js"></script>
+  </body>
+</html>
